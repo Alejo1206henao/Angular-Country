@@ -1,0 +1,11 @@
+<!--mando a llamar el metodo en este caso es el emitValue-->
+<!--  aca le estoy diciendo que atraves del  (keyup.enter), cada vez-->
+<!--  que le de enter me emita ese valor y me lo retorne-->
+<input
+  type="text"
+  [placeholder]="placeHolder"
+  (keyup)="onKeyPress(txtInit.value)"
+  (keyup.enter)="emitValue(txtInit.value)"
+  class="form-control"
+  #txtInit
+>

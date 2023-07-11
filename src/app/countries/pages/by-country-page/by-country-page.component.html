@@ -1,0 +1,23 @@
+<h2> Por Paises </h2>
+<hr>
+<div class="row">
+  <div class="col">
+    <!--    search Box-->
+    <!--    creo una variable que se llama (onValue) y el cual le digo que atraves-->
+    <!--    de "searchByCapital" me genere un evento -->
+    <shared-search-box
+      (onValue)="searchByCountry($event)"
+      (onDebounce)="searchByCountry($event)"
+      placeHolder="Busqueda por País"></shared-search-box>
+        <shared-loading-spinner *ngIf="isLoading"> </shared-loading-spinner>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col">
+    <hr>
+    <countrie-table [country]="country"></countrie-table>
+  </div>
+</div>
+
+
